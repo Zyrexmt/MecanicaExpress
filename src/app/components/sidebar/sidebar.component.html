@@ -1,0 +1,26 @@
+<div class="container">
+    <div [ngClass]="{
+        'expanded': !isCollapsed,
+        'collapsed': isCollapsed
+    }" class="sidebar">
+    
+    <button (click)="toggleSidebar()" class="toggle-button">
+        <span [ngClass]="{
+            'arrow-flip': isCollapsed
+        }" class = "arrow">❮</span>
+    </button>
+
+    <div *ngIf="!isCollapsed" class="menu">
+        <h2 class="menu-title">Menu</h2>
+        <ul class="menu-list">
+            <li class="menu-item">Inicio</li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <h1 class="main-title">Home</h1>
+        <p class="main-text">Ola mundo</p>
+    </div>
+
+    </div>
+</div>
