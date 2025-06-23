@@ -1,0 +1,23 @@
+/* Background geral: #F4F7F6 (cinza claro)
+
+Cabeçalhos e textos: #2C3E50 (azul escuro)
+
+Botões principais: #4A90E2 (azul calmo)
+
+Menus e ícones: #7F8C8D (cinza médio)
+
+Botões secundários e bordas: #BDC3C7 (cinza claro)
+
+Mensagens de sucesso/alerta: #27AE60 (verde suave)
+*/
+
+
+.sidebar-wrapper {
+  margin-top: 6px;
+}
+
+.background {
+  background-color: #F4F7F6;
+  height: 100%;
+}
+

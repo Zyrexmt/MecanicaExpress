@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+}
+
+.header {
+    background-color: #7F8C8D;
+    padding: 1rem;
+    border-radius: 15px;
+    position: sticky;
+    overflow: hidden;
+}
+
+.white{
+    color:white;
+}
+
