@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+}
+
+.logo {
+    width: 5dvh;
+    height: auto;
+    margin-left: 1rem;
+}
+
+.user{
+    width: 5dvh;
+    height: auto;
+    margin-right: 1rem;
+}
+
+input[type="text"] {
+    width:100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--background-base);
+    color: var(--text-primary);
+}
+
+
+
+
+.header {
+    background-color: var(--brand-primary);
+    padding: 1rem;
+    border-radius: 15px;
+    position: sticky;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.white{
+    color:white;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+

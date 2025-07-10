@@ -1,0 +1,9 @@
+:root {
+  --brand-primary: #4A90E2;         /* Cor de fundo */
+  --text-secondary: #7F8C8D;        /* Cor de textos secundários */
+  --background-base: #F4F7F6;       /* Cor de fundo da página */
+  --text-primary: #2C3E50;          /* Cor de textos principais */
+  --border-base: #BDC3C7;           /* Cor de bordas */
+  --status-success: #27AE60;        /* Cor de ícones de sucesso */
+  --action-primary: linear-gradient(to right, #FF512F, #F09819); /* Cor de botões */
+}
