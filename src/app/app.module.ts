@@ -26,6 +26,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { SupplierCreateComponent } from './components/supplier/supplier-create/supplier-create.component';
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { ClientCreateComponent } from './components/client/client-create/client-
     MatOptionModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

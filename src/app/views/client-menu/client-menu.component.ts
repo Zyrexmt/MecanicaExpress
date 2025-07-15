@@ -1,10 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Client } from 'src/app/components/client/client.model';
+import { ClientService } from 'src/app/components/client/client.service';
 
 @Component({
   selector: 'app-client-menu',
   templateUrl: './client-menu.component.html',
   styleUrls: ['./client-menu.component.css']
 })
-export class ClientMenuComponent {
+export class ClientMenuComponent implements OnInit{
+
+  allClient: Client[] = [];
+
+  constructor(
+       private router: Router,
+       private clientService: ClientService) { }
+
+
+       navigateToClienteCreate(): void {
+      this.router.navigate(['/clients/create']);
+    }
+
+    ngOnInit(): void {
+      this.clientService.read().subscribe((client: Client[]) => {
+       this.allClient = client;
+     })
+    }
 
 }
