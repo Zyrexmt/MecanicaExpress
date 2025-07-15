@@ -5,5 +5,12 @@
   --text-primary: #2C3E50;          /* Cor de textos principais */
   --border-base: #BDC3C7;           /* Cor de bordas */
   --status-success: #27AE60;        /* Cor de ícones de sucesso */
+  --status-error: #E74C3C;   /* Cor de ícones de erro ou fracasso */
   --action-primary: linear-gradient(to right, #FF512F, #F09819); /* Cor de botões */
+  --status-success-dark: #219150;
+  --status-error-dark: #C0392B;
 }
+
+
+html, body { height: 10dvh; width: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow-x: hidden;}

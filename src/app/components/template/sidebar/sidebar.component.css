@@ -4,14 +4,15 @@
 }
 
 .sidebar{
-    height: 82dvh;
+    height: 84.5dvh;
     background-color: var(--brand-primary);
     color: white;
     position: sticky;
     transition: width 0.3s ease;
     overflow: hidden;
     border-radius: 15px;
-    font-family: 'Roboto', sans-serif;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 
 .sidebar.expanded {

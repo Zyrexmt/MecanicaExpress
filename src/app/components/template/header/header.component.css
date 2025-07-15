@@ -5,13 +5,15 @@
 .logo {
     width: 5dvh;
     height: auto;
-    margin-left: 1rem;
+    margin-top: 15px;
+
 }
 
 .user{
     width: 5dvh;
     height: auto;
-    margin-right: 1rem;
+    margin-top: 15px;
+
 }
 
 input[type="text"] {
@@ -33,6 +35,9 @@ input[type="text"] {
     position: sticky;
     overflow: hidden;
     justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
 }
 
 .white{
@@ -43,6 +48,7 @@ input[type="text"] {
     display: flex;
     align-items: center;
     width: 50%;
+    
 }
 
 

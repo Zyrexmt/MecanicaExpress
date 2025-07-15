@@ -1,0 +1,75 @@
+<div class="container">
+        <mat-card class="quadro">
+            <!-- conteudo-->
+            <mat-card class="form-card">
+                <mat-card-title>New supplier</mat-card-title>
+            <div class="form-scroll">
+                <form class="form-layout">
+
+                    <div class="form-section">
+                    <!-- Coluna 1 -->
+                     <h3>Fornecedor</h3>
+                    <mat-form-field>
+                        <mat-label>Fornecedor</mat-label>
+                        <input matInput placeholder="Nome Fantasia" name="forNomeFantasia" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Cnpj</mat-label>
+                        <input matInput name="forCnpj" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Razão Social" name="forRazaoSocial" required>
+                    </mat-form-field>
+                    </div>
+
+                    <div class="form-section">
+                    <!-- Coluna 2 -->    
+                     <h3>Endereço</h3>
+                    <mat-form-field>
+                        <input matInput placeholder="Rua" name="endRua" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Número</mat-label>
+                        <input matInput name="endNumero" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Cidade" name="endCidade" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>CEP</mat-label>
+                        <input matInput name="endCep" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Estado</mat-label>
+                        <input matInput name="endEstado" required>
+                    </mat-form-field>
+                    </div>
+
+                    <div class="form-section">
+                    <!-- Coluna 3 -->    
+                     <h3>Contato</h3>
+                    <mat-form-field>
+                        <mat-label>Celular</mat-label>
+                        <input matInput name="conCelular" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Telefone</mat-label>
+                        <input matInput placeholder="Telefone Comercial" name="conTelefoneComercial" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Email</mat-label>
+                        <input matInput name="conEmail" required>
+                    </mat-form-field>
+                    </div>
+
+                    
+
+                </form>
+            </div>
+            <div class="finish">
+                <button class="cancel">CANCEL</button>
+                <button class="save">SAVE</button>
+                </div>
+            </mat-card>
+        </mat-card>
+</div>

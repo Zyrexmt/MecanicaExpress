@@ -5,31 +5,34 @@
 
 .quadro {
     width: 100%;
-    height: 82dvh;
+    height: 84.5dvh;
     background-color: var(--brand-primary);
     border-radius: 15px;
-    margin: 6px;
+    margin-top: 6px;
+    margin-left: 6px;
+    margin-right: 5px;
     text-align: center;
-    
+ 
 }
 
 .create-button{
     width: 100%;
-    height: 50px;
+    height: 70px;
     padding: 10px;
 }
 
 button {
-    margin-bottom: 30px; /* Espaço inferior do botão */
-    width: 50%; /* Ocupa toda a largura do container */
-    height: 60px; /* Altura padrão do botão */
-    background: var(--action-primary); /* Cor roxa como fundo do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 5px; /* Bordas levemente arredondadas */
-    font-weight: 600; /* Deixa o texto um pouco mais marcante */
-    letter-spacing: 0.5px; /* Espaçamento sutil entre letras */
-    align-items: center; /* Centraliza o conteúdo do botão */
-    transition: all 0.3s ease; /* Transições suaves para hover e active */
+    margin-bottom: 30px; 
+    width: 50%; 
+    height: 70px !important;
+    background: var(--action-primary); 
+    border: none;
+    border-radius: 5px; 
+    font-weight: 600;
+    font-size: 20px; 
+    letter-spacing: 0.5px; 
+    align-items: center; 
+    transition: all 0.3s ease; 
 }
 
 .button{

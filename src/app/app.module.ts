@@ -17,6 +17,15 @@ import { ProductMenuComponent } from './views/product-menu/product-menu.componen
 import { SupplierMenuComponent } from './views/supplier-menu/supplier-menu.component';
 import { ClientMenuComponent } from './views/client-menu/client-menu.component';
 import { MatTableModule } from '@angular/material/table';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { SupplierCreateComponent } from './components/supplier/supplier-create/supplier-create.component';
+import { ClientCreateComponent } from './components/client/client-create/client-create.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +36,10 @@ import { MatTableModule } from '@angular/material/table';
     FooterComponent,
     ProductMenuComponent,
     SupplierMenuComponent,
-    ClientMenuComponent
+    ClientMenuComponent,
+    ProductCreateComponent,
+    SupplierCreateComponent,
+    ClientCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +51,13 @@ import { MatTableModule } from '@angular/material/table';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

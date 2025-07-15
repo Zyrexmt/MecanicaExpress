@@ -1,22 +1,14 @@
 
-.sidebar-wrapper {
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
 .footer-wrapper {
   flex-shrink: 0;
-}
-
-.background {
-  background-color: var(--background-base);
-  height: 100%;
 }
 
 .main-content {
   flex: 1;
   display: flex;
-  overflow: hidden;
-  width: 2541px;
+  width: 100%;
+  margin-bottom: 5px;
+  height: 100%;
 }
 
 .page-content {
