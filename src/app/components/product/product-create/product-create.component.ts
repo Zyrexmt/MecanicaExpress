@@ -23,7 +23,7 @@ export class ProductCreateComponent implements OnInit {
     proAtivo: 'Ativo',
     proDataCadastro: new Date().toISOString(),
     proDataAtualizacao: new Date().toISOString(),
-    proFornecedor: 0
+    forId: 0
   }
 
   constructor(private productService: ProductService,
@@ -42,4 +42,6 @@ export class ProductCreateComponent implements OnInit {
     this.router.navigate(['/products']);
   }
 
+
 }
+

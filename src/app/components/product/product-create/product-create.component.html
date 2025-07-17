@@ -7,28 +7,28 @@
                 <form>
                     <mat-form-field>
                         <mat-label>Produto</mat-label>
-                        <input matInput placeholder="Nome" name="proNome" required>
+                        <input matInput placeholder="Nome" name="proNome" required [(ngModel)]="product.proNome">
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Descrição</mat-label>
-                        <textarea matInput placeholder="Descrição" name="proDescricao" required></textarea>
+                        <textarea matInput placeholder="Descrição" name="proDescricao" required [(ngModel)]="product.proDescricao"></textarea>
                     </mat-form-field>
                     <mat-form-field>
                     <mat-label>Preço de Custo</mat-label>
-                        <input matInput type="number" placeholder="Preço de custo (R$)" name="proPrecoCusto" step="0.01" min="0" required>
+                        <input matInput type="number" placeholder="Preço de custo (R$)" name="proPrecoCusto" step="0.01" min="0" required [(ngModel)]="product.proPrecoCusto">
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Preço de Venda</mat-label>
-                        <input matInput type="number" placeholder="Preço de venda (R$)" name="proPrecoVenda" step="0.01" min="0" required>
+                        <input matInput type="number" placeholder="Preço de venda (R$)" name="proPrecoVenda" step="0.01" min="0" required [(ngModel)]="product.proPrecoVenda">
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Quantidade em Estoque</mat-label>
-                        <input matInput type="number" placeholder="Quantidade em estoque" name="proQuantidadeEstoque" min="0" required>
+                        <input matInput type="number" placeholder="Quantidade em estoque" name="proQuantidadeEstoque" min="0" required [(ngModel)]="product.proQuantidadeEstoque">
                     </mat-form-field>
             <!--categoria-->
                     <mat-form-field  class="full-width custom-select">
                             <mat-label>Categoria</mat-label>
-                        <mat-select name="proCategoria" required>
+                        <mat-select name="proCategoria" required [(ngModel)]="product.proCategoria">
 
                         <mat-option value="teclado">
                             <mat-icon class="option-icon">keyboard</mat-icon>
@@ -82,12 +82,12 @@
             <!--Códogo de barras-->
                 <mat-form-field>
                     <mat-label>Código de Barras</mat-label>
-                    <input matInput placeholder="Código de barras" name="proCodigoBarras" required>
+                    <input matInput placeholder="Código de barras" name="proCodigoBarras" required [(ngModel)]="product.proCodigoBarras">
                 </mat-form-field>
                 <!-- Marca -->
                 <mat-form-field class="full-width custom-select">
                     <mat-label>Marca</mat-label>
-                    <mat-select name="proMarca" required>
+                    <mat-select name="proMarca" required [(ngModel)]="product.proMarca">
 
                         <mat-option value="razer">
                             <img src="assets/img/razer.png" width="20" style="margin-right: 8px;" class="option-img" />
@@ -140,37 +140,42 @@
             <!--unidade de medida-->
                 <mat-form-field>
                     <mat-label>Unidade de Medida</mat-label>
-                    <input matInput placeholder="Unidade de medida" name="proUnidadeMedida" required>
+                    <input matInput placeholder="Unidade de medida" name="proUnidadeMedida" required [(ngModel)]="product.proUnidadeMedida">
                 </mat-form-field>
                 <!--Produto ativo-->
                 <mat-form-field>
                     <mat-label>Produto Ativo?</mat-label>
-                    <mat-select name="proAtivo">
-                        <mat-option [value]="true">Sim</mat-option>
-                        <mat-option [value]="false">Não</mat-option>
+                    <mat-select name="proAtivo" required [(ngModel)]="product.proAtivo">
+                        <mat-option value="Ativo">Ativo</mat-option>
+                        <mat-option value="Inativo">Inativo</mat-option>
                     </mat-select>
                 </mat-form-field>
                 <!--Datas-->
                 <mat-form-field>
                     <mat-label>Data de Cadastro</mat-label>
-                    <input matInput [matDatepicker]="picker1" placeholder="Data de Cadastro" name="proDataCadastro" required>
+                    <input matInput [matDatepicker]="picker1" placeholder="Data de Cadastro" name="proDataCadastro" required [(ngModel)]="product.proDataCadastro">
                     <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                     <mat-datepicker #picker1></mat-datepicker>
                 </mat-form-field>
 
                 <mat-form-field>
                     <mat-label>Data de Atualização</mat-label>
-                    <input matInput [matDatepicker]="picker2" placeholder="Data de Atualização" name="proDataAtualizacao" required>
+                    <input matInput [matDatepicker]="picker2" placeholder="Data de Atualização" name="proDataAtualizacao" required [(ngModel)]="product.proDataAtualizacao">
                     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                     <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Fornecedor</mat-label>
+                    <input matInput placeholder="Fornecedor" name="fornecedor" required [(ngModel)]="product.forId">
                 </mat-form-field>
                 
 
                 </form>
 
             <div class="finish">
-                <button class="cancel">CANCEL</button>
-                <button class="save">SAVE</button>
+                <button (click)="cancel()" class="cancel">CANCEL</button>
+                <button (click)="createProduct()" class="save">SAVE</button>
                 </div>
             </div>
             </mat-card> 
