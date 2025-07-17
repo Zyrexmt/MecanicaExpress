@@ -27,6 +27,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { SupplierCreateComponent } from './components/supplier/supplier-create/supplier-create.component';
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { PaymentCreateComponent } from './components/payment/payment-create/payment-create.component';
+import { PaymentMenuComponent } from './views/payment-menu/payment-menu.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ClientMenuComponent,
     ProductCreateComponent,
     SupplierCreateComponent,
-    ClientCreateComponent
+    ClientCreateComponent,
+    PaymentCreateComponent,
+    PaymentMenuComponent
   ],
   imports: [
     BrowserModule,

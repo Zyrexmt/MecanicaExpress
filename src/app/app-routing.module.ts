@@ -7,7 +7,8 @@ import { ClientMenuComponent } from './views/client-menu/client-menu.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { SupplierCreateComponent } from './components/supplier/supplier-create/supplier-create.component';
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
-
+import { PaymentMenuComponent } from './views/payment-menu/payment-menu.component';
+import { PaymentCreateComponent } from './components/payment/payment-create/payment-create.component';
 
 const routes: Routes = [
 
@@ -39,6 +40,14 @@ const routes: Routes = [
     path: "clients/create",
     component: ClientCreateComponent
   },
+  {
+    path: "payments",
+    component: PaymentMenuComponent
+  },
+  {
+    path: "payments/create",
+    component: PaymentCreateComponent
+  }
 ];
 
 @NgModule({
