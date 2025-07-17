@@ -14,9 +14,10 @@ export class PaymentCreateComponent implements OnInit {
     fpgTipo: '',
     fpgDescricao: '',
     fpgPermiteParcelamento: false,
-    fpgNumMaxParcelas: 0,
+    fpgNumMaxParcelas: 1,
     fpgTaxaAdicional: 0
   };
+
 
   constructor(private paymentService: PaymentService,
               private router: Router) { }

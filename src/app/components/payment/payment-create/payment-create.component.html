@@ -9,7 +9,7 @@
                     <!--Forma Pagamento-->
                 <mat-form-field>
                     <mat-label>Forma de pagamento?</mat-label>
-                    <mat-select name="fpgTipo" required >
+                    <mat-select name="fpgTipo" required [(ngModel)]="payment.fpgTipo" >
                         <mat-option value="Credito">Crédito</mat-option>
                         <mat-option value="Debito">Débito</mat-option>
                         <mat-option value="Pix">Pix</mat-option>
@@ -20,13 +20,13 @@
                     <!--Descrição-->
                     <mat-form-field>
                         <mat-label>Descrição</mat-label>
-                        <textarea matInput placeholder="Descrição" name="fpgDescricao" required ></textarea>
+                        <textarea matInput placeholder="Descrição" name="fpgDescricao" required [(ngModel)]="payment.fpgDescricao"></textarea>
                     </mat-form-field>
 
                     <!--Permite parcelamento-->
                 <mat-form-field>
                     <mat-label>Parcelamento ativo?</mat-label>
-                    <mat-select name="fpgPermiteParcelamento" required >
+                    <mat-select name="fpgPermiteParcelamento" required [(ngModel)]="payment.fpgPermiteParcelamento" [disabled]="payment.fpgTipo != 'Credito'">
                         <mat-option [value]="true">Sim</mat-option>
                         <mat-option [value]="false">Não</mat-option>
                     </mat-select>
@@ -35,7 +35,7 @@
             <!--Numero de Parcelas-->
                 <mat-form-field>
                     <mat-label>Número de parcelas</mat-label>
-                    <mat-select name="fpgNumMaxParcelas" required >
+                    <mat-select name="fpgNumMaxParcelas" required [(ngModel)]="payment.fpgNumMaxParcelas" [disabled]="payment.fpgPermiteParcelamento === false || payment.fpgTipo != 'Credito'">
                         <mat-option value="1">1 Parcelas</mat-option>
                         <mat-option value="2">2 Parcelas</mat-option>
                         <mat-option value="3">3 Parcelas</mat-option>
@@ -53,7 +53,8 @@
                 <!--Taxa adicional-->
                 <mat-form-field>
                     <mat-label>Taxa adicional</mat-label>
-                    <mat-select name="fpgTaxaAdicional" required >
+                    <mat-select name="fpgTaxaAdicional" required [(ngModel)]="payment.fpgTaxaAdicional">
+                        <mat-option value="0">Sem Taxa</mat-option>
                         <mat-option value="0.1">10%</mat-option>
                         <mat-option value="0.2">20%</mat-option>
                         <mat-option value="0.3">30%</mat-option>
@@ -69,8 +70,8 @@
                 </form>
 
             <div class="finish">
-                <button  class="cancel">CANCEL</button>
-                <button  class="save">SAVE</button>
+                <button (click)="cancel()" class="cancel">CANCEL</button>
+                <button (click)="createPayment()" class="save">SAVE</button>
                 </div>
             </div>
             </mat-card> 
