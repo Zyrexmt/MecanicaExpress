@@ -29,13 +29,18 @@ export class ClientService {
       return this.http.get<Client[]>(this.baseUrl);
     }
 
+    readById(id: string): Observable<Client> {
+      const url = `${this.baseUrl}/${id}`;
+      return this.http.get<Client>(url);
+    }
+
     update(client: Client): Observable<Client>{
       const url = `${this.baseUrl}/${client.cliId}`;
       return this.http.put<Client>(url, client);
     }
 
-    delete(id: number): Observable<Client>{
+    delete(id: number): Observable<void>{
       const url = `${this.baseUrl}/${id}`;
-      return this.http.delete<Client>(url);
+      return this.http.delete<void>(url);
     }
 }
