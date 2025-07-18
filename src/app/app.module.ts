@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -35,11 +35,11 @@ import { ClientUpdateComponent } from './components/client/client-update/client-
 import { SupplierReadComponent } from './components/supplier/supplier-read/supplier-read.component';
 import { SupplierUpdateComponent } from './components/supplier/supplier-update/supplier-update.component';
 import { SupplierDeleteComponent } from './components/supplier/supplier-delete/supplier-delete.component';
-
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { PaymentReadComponent } from './components/payment/payment-read/payment-read.component';
 import { PaymentUpdateComponent } from './components/payment/payment-update/payment-update.component';
 import { PaymentDeleteComponent } from './components/payment/payment-delete/payment-delete.component';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 
 @NgModule({
   declarations: [
@@ -66,11 +66,13 @@ import { PaymentDeleteComponent } from './components/payment/payment-delete/paym
     ProductReadComponent,
       PaymentReadComponent,
       PaymentUpdateComponent,
-      PaymentDeleteComponent
+      PaymentDeleteComponent,
+      ProductDeleteComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
