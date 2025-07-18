@@ -29,6 +29,8 @@ import { ClientCreateComponent } from './components/client/client-create/client-
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { PaymentCreateComponent } from './components/payment/payment-create/payment-create.component';
 import { PaymentMenuComponent } from './views/payment-menu/payment-menu.component';
+import { ClientReadComponent } from './components/client/client-read/client-read.component';
+import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { PaymentMenuComponent } from './views/payment-menu/payment-menu.componen
     SupplierCreateComponent,
     ClientCreateComponent,
     PaymentCreateComponent,
-    PaymentMenuComponent
+    PaymentMenuComponent,
+    ClientReadComponent,
+    ClientDeleteComponent
   ],
   imports: [
     BrowserModule,

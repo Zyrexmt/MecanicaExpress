@@ -9,6 +9,8 @@
   --action-primary: linear-gradient(to right, #FF512F, #F09819); /* Cor de botões */
   --status-success-dark: #219150;
   --status-error-dark: #C0392B;
+  --table-read-bg: linear-gradient(to right, #DCEAF6, #B0CFE3);
+  --action-secundary: #0000;
 }
 
 
