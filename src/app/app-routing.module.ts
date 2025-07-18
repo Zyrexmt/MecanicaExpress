@@ -10,6 +10,7 @@ import { ClientCreateComponent } from './components/client/client-create/client-
 import { PaymentMenuComponent } from './views/payment-menu/payment-menu.component';
 import { PaymentCreateComponent } from './components/payment/payment-create/payment-create.component';
 import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
+import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
 
 const routes: Routes = [
 
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: "clients/create",
     component: ClientCreateComponent
+  },
+  {
+    path: "clients/update/:cliId",
+    component: ClientUpdateComponent
   },
   {
     path: "clients/delete/:cliId",

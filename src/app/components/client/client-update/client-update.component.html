@@ -1,0 +1,73 @@
+<div class="container">
+        <mat-card class="quadro">
+            <!-- conteudo-->
+            <mat-card class="form-card">
+                <mat-card-title>New client</mat-card-title>
+            <div class="form-scroll">
+                <form class="form-layout">
+
+                    <div class="form-section">
+                    <!-- Coluna 1 -->
+                     <h3>Cliente</h3>
+                    <mat-form-field>
+                        <mat-label>Cliente</mat-label>
+                        <input matInput placeholder="Nome" name="cliNome" required [(ngModel)]="client.cliNome">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Cpf</mat-label>
+                        <input matInput name="cliCpf" required [(ngModel)]="client.cliCpf">
+                    </mat-form-field>
+                    </div>
+
+                    <div class="form-section">
+                    <!-- Coluna 2 -->    
+                     <h3>Endereço</h3>
+                    <mat-form-field>
+                        <input matInput placeholder="Rua" name="endRua" required [(ngModel)]="client.endRua">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Número</mat-label>
+                        <input matInput name="endNumero" required [(ngModel)]="client.endNumero">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Cidade</mat-label>
+                        <input matInput placeholder="Cidade" name="endCidade" required [(ngModel)]="client.endCidade">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>CEP</mat-label>
+                        <input matInput name="endCep" required [(ngModel)]="client.endCep">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Estado</mat-label>
+                        <input matInput name="endEstado" required [(ngModel)]="client.endEstado">
+                    </mat-form-field>
+                    </div>
+
+                    <div class="form-section">
+                    <!-- Coluna 3 -->    
+                     <h3>Contato</h3>
+                    <mat-form-field>
+                        <mat-label>Celular</mat-label>
+                        <input matInput name="conCelular" required [(ngModel)]="client.conCelular">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Telefone</mat-label>
+                        <input matInput placeholder="Telefone Comercial" name="conTelefoneComercial" required [(ngModel)]="client.conTelefoneComercial">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email Comercial" name="conEmail" required [(ngModel)]="client.conEmail">
+                    </mat-form-field>
+                    </div>
+
+                    
+
+                </form>
+            </div>
+            <div class="finish">
+                <button (click)="cancel()"  class="cancel">CANCEL</button>
+                <button (click)="updateClient()" class="save">UPDATE</button>
+                </div>
+            </mat-card>
+        </mat-card>
+</div>
