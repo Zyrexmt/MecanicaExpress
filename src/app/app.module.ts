@@ -36,6 +36,8 @@ import { SupplierReadComponent } from './components/supplier/supplier-read/suppl
 import { SupplierUpdateComponent } from './components/supplier/supplier-update/supplier-update.component';
 import { SupplierDeleteComponent } from './components/supplier/supplier-delete/supplier-delete.component';
 
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +58,9 @@ import { SupplierDeleteComponent } from './components/supplier/supplier-delete/s
     ClientUpdateComponent,
     SupplierReadComponent,
     SupplierUpdateComponent,
-    SupplierDeleteComponent
+    SupplierDeleteComponent,
+
+    ProductReadComponent
   ],
   imports: [
     BrowserModule,
