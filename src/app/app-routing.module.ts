@@ -16,6 +16,7 @@ import { SupplierDeleteComponent } from './components/supplier/supplier-delete/s
 import { PaymentUpdateComponent } from './components/payment/payment-update/payment-update.component';
 import { PaymentDeleteComponent } from './components/payment/payment-delete/payment-delete.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 
 const routes: Routes = [
 
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: "products/delete/:proId",
     component: ProductDeleteComponent
+  },
+  {
+    path: "products/update/:proId",
+    component: ProductUpdateComponent
   },
   {
     path: "suppliers",
