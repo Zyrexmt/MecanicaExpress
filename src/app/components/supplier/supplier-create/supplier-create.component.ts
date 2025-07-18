@@ -11,13 +11,13 @@ import { SupplierService } from '../supplier.service';
 export class SupplierCreateComponent implements OnInit {
 
   supplier: Supplier = {
-    forCnpj: '',
     forNomeFantasia: '',
+    forCnpj: '',
     forRazaoSocial: '',
     endRua: '',
     endNumero: '',
-    endCep: '',
     endCidade: '',
+    endCep: '',
     endEstado: '',
     conCelular: '',
     conTelefoneComercial: '',

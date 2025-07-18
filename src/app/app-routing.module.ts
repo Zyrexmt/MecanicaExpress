@@ -11,6 +11,8 @@ import { PaymentMenuComponent } from './views/payment-menu/payment-menu.componen
 import { PaymentCreateComponent } from './components/payment/payment-create/payment-create.component';
 import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
 import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
+import { SupplierUpdateComponent } from './components/supplier/supplier-update/supplier-update.component';
+import { SupplierDeleteComponent } from './components/supplier/supplier-delete/supplier-delete.component';
 
 const routes: Routes = [
 
@@ -33,6 +35,14 @@ const routes: Routes = [
   {
     path: "suppliers/create",
     component: SupplierCreateComponent
+  },
+  {
+    path: "suppliers/update/:forId",
+    component: SupplierUpdateComponent
+  },
+  {
+    path: "suppliers/delete/:forId",
+    component: SupplierDeleteComponent
   },
   {
     path: "clients",

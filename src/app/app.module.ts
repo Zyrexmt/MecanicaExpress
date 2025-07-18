@@ -32,6 +32,9 @@ import { PaymentMenuComponent } from './views/payment-menu/payment-menu.componen
 import { ClientReadComponent } from './components/client/client-read/client-read.component';
 import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
 import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
+import { SupplierReadComponent } from './components/supplier/supplier-read/supplier-read.component';
+import { SupplierUpdateComponent } from './components/supplier/supplier-update/supplier-update.component';
+import { SupplierDeleteComponent } from './components/supplier/supplier-delete/supplier-delete.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { ClientUpdateComponent } from './components/client/client-update/client-
     PaymentMenuComponent,
     ClientReadComponent,
     ClientDeleteComponent,
-    ClientUpdateComponent
+    ClientUpdateComponent,
+    SupplierReadComponent,
+    SupplierUpdateComponent,
+    SupplierDeleteComponent
   ],
   imports: [
     BrowserModule,

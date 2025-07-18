@@ -29,13 +29,18 @@ export class SupplierService {
     return this.http.get<Supplier[]>(this.baseUrl);
   }
 
+  readById(id: string): Observable<Supplier> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Supplier>(url);
+  }
+
   update(supplier: Supplier): Observable<Supplier> {
     const url = `${this.baseUrl}/${supplier.forId}`;
     return this.http.put<Supplier>(url, supplier);
   }
 
-  delete(id: number): Observable<Supplier> {
+  delete(id: number): Observable<void> {
     const url = `${this.baseUrl}/${id}`;
-    return this.http.delete<Supplier>(url);
+    return this.http.delete<void>(url);
   }
 }
