@@ -1,0 +1,79 @@
+<div class="container">
+        <mat-card class="quadro">
+            <!-- conteudo-->
+            <mat-card class="form-card">
+                <mat-card-title>Delete payment method</mat-card-title>
+            <div class="form-scroll">
+                <form>
+
+                    <!--Forma Pagamento-->
+                <mat-form-field>
+                    <mat-label>Forma de pagamento?</mat-label>
+                    <mat-select name="fpgTipo" disabled [value]="payment.fpgTipo">
+                        <mat-option value="Credito">Crédito</mat-option>
+                        <mat-option value="Debito">Débito</mat-option>
+                        <mat-option value="Pix">Pix</mat-option>
+                        <mat-option value="Boleto">Boleto</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                    <!--Descrição-->
+                    <mat-form-field>
+                        <mat-label>Descrição</mat-label>
+                        <textarea matInput placeholder="Descrição" name="fpgDescricao" disabled [value]="payment.fpgDescricao"></textarea>
+                    </mat-form-field>
+
+                    <!--Permite parcelamento-->
+                <mat-form-field>
+                    <mat-label>Parcelamento ativo?</mat-label>
+                    <mat-select name="fpgPermiteParcelamento" disabled [value]="payment.fpgPermiteParcelamento">
+                        <mat-option [value]="true">Sim</mat-option>
+                        <mat-option [value]="false">Não</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                
+            <!--Numero de Parcelas-->
+                <mat-form-field>
+                    <mat-label>Número de parcelas</mat-label>
+                    <mat-select name="fpgNumMaxParcelas" disabled [value]="payment.fpgNumMaxParcelas">
+                        <mat-option [value]="1">1 Parcelas</mat-option>
+                        <mat-option [value]="2">2 Parcelas</mat-option>
+                        <mat-option [value]="3">3 Parcelas</mat-option>
+                        <mat-option [value]="4">4 Parcelas</mat-option>
+                        <mat-option [value]="5">5 Parcelas</mat-option>
+                        <mat-option [value]="6">6 Parcelas</mat-option>
+                        <mat-option [value]="7">7 Parcelas</mat-option>
+                        <mat-option [value]="8">8 Parcelas</mat-option>
+                        <mat-option [value]="9">9 Parcelas</mat-option>
+                        <mat-option [value]="10">10 Parcelas</mat-option>
+                        <mat-option [value]="11">11 Parcelas</mat-option>
+                        <mat-option [value]="12">12 Parcelas</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <!--Taxa adicional-->
+                <mat-form-field>
+                    <mat-label>Taxa adicional</mat-label>
+                    <mat-select name="fpgTaxaAdicional" disabled [value]="payment.fpgTaxaAdicional">
+                        <mat-option [value]="0">Sem Taxa</mat-option>
+                        <mat-option [value]=0.1>10%</mat-option>
+                        <mat-option [value]=0.2>20%</mat-option>
+                        <mat-option [value]=0.3>30%</mat-option>
+                        <mat-option [value]=0.4>40%</mat-option>
+                        <mat-option [value]=0.5>50%</mat-option>
+                        <mat-option [value]=0.6>60%</mat-option>
+                        <mat-option [value]=0.7>70%</mat-option>
+                        <mat-option [value]=0.8>80%</mat-option>
+                        <mat-option [value]=0.9>90%</mat-option>
+                        <mat-option [value]=1.0>100%</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                </form>
+
+            <div class="finish">
+                <button (click)="cancel()" class="cancel">CANCEL</button>
+                <button (click)="deletePayment()" class="save">SAVE</button>
+                </div>
+            </div>
+            </mat-card> 
+        </mat-card>
+</div>

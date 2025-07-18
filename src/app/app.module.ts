@@ -37,6 +37,9 @@ import { SupplierUpdateComponent } from './components/supplier/supplier-update/s
 import { SupplierDeleteComponent } from './components/supplier/supplier-delete/supplier-delete.component';
 
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { PaymentReadComponent } from './components/payment/payment-read/payment-read.component';
+import { PaymentUpdateComponent } from './components/payment/payment-update/payment-update.component';
+import { PaymentDeleteComponent } from './components/payment/payment-delete/payment-delete.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { ProductReadComponent } from './components/product/product-read/product-
     SupplierUpdateComponent,
     SupplierDeleteComponent,
 
-    ProductReadComponent
+    ProductReadComponent,
+      PaymentReadComponent,
+      PaymentUpdateComponent,
+      PaymentDeleteComponent
   ],
   imports: [
     BrowserModule,

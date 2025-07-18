@@ -2,8 +2,10 @@
     <div class="container">
         <mat-card class="quadro">
             <div class="create-button">
-        <button mat-button class="button" routerLink="/payments/create">New payment method</button>
+        <button mat-raised-button class="button" (click)="navigateToPaymentCreate()">New payment method</button>
     </div>   
+
+    <app-payment-read></app-payment-read>
     </mat-card>
 </div>
     

@@ -13,6 +13,8 @@ import { ClientDeleteComponent } from './components/client/client-delete/client-
 import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
 import { SupplierUpdateComponent } from './components/supplier/supplier-update/supplier-update.component';
 import { SupplierDeleteComponent } from './components/supplier/supplier-delete/supplier-delete.component';
+import { PaymentUpdateComponent } from './components/payment/payment-update/payment-update.component';
+import { PaymentDeleteComponent } from './components/payment/payment-delete/payment-delete.component';
 
 const routes: Routes = [
 
@@ -67,6 +69,14 @@ const routes: Routes = [
   {
     path: "payments/create",
     component: PaymentCreateComponent
+  },
+  {
+    path: "payments/update/:fpgId",
+    component: PaymentUpdateComponent
+  },
+  {
+    path: "payments/delete/:fpgId",
+    component: PaymentDeleteComponent
   }
 ];
 

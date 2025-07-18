@@ -29,6 +29,11 @@ export class PaymentService {
     return this.http.get<Payment[]>(this.baseUrl);
   }
 
+  readById(fpgId: string): Observable<Payment> {
+    const url = `${this.baseUrl}/${fpgId}`;
+    return this.http.get<Payment>(url);
+  }
+
   update(payment: Payment): Observable<Payment> {
     const url = `${this.baseUrl}/${payment.fpgId}`;
     return this.http.put<Payment>(url, payment);

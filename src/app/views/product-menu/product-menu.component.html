@@ -2,7 +2,7 @@
     <div class="container">
         <mat-card class="quadro">
             <div class="create-button">
-        <button mat-button class="button" routerLink="/products/create">New product</button>
+        <button mat-raised-button class="button" (click)="navigateToProductCreate()">New product</button>
     </div>
     <app-product-read></app-product-read>   
     </mat-card>
