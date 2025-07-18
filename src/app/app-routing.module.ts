@@ -9,6 +9,7 @@ import { SupplierCreateComponent } from './components/supplier/supplier-create/s
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
 import { PaymentMenuComponent } from './views/payment-menu/payment-menu.component';
 import { PaymentCreateComponent } from './components/payment/payment-create/payment-create.component';
+import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
 
 const routes: Routes = [
 
@@ -39,6 +40,10 @@ const routes: Routes = [
   {
     path: "clients/create",
     component: ClientCreateComponent
+  },
+  {
+    path: "clients/delete/:cliId",
+    component: ClientDeleteComponent
   },
   {
     path: "payments",

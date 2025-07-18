@@ -31,6 +31,7 @@ import { PaymentCreateComponent } from './components/payment/payment-create/paym
 import { PaymentMenuComponent } from './views/payment-menu/payment-menu.component';
 import { ClientReadComponent } from './components/client/client-read/client-read.component';
 import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
+import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ClientDeleteComponent } from './components/client/client-delete/client-
     PaymentCreateComponent,
     PaymentMenuComponent,
     ClientReadComponent,
-    ClientDeleteComponent
+    ClientDeleteComponent,
+    ClientUpdateComponent
   ],
   imports: [
     BrowserModule,

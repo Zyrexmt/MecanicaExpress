@@ -50,14 +50,14 @@ tr:hover {
 
 /* Editar (verde neon) */
 .edit > i {
-  color: #00e676;
-  text-shadow: 0 0 6px #00e676, 0 0 12px #00ff8c;
+  color: var(--status-success);
+  text-shadow: 0 0 6px var(--status-success), 0 0 12px var(--status-success);
 }
 
 /* Deletar (vermelho neon) */
 .delete > i {
-  color: #ff5252;
-  text-shadow: 0 0 6px #ff5252, 0 0 12px #ff0000;
+  color: var(--status-error);
+  text-shadow: 0 0 6px var(--status-error), 0 0 12px var(--status-error);
 }
 
 /* Hover nos ícones */

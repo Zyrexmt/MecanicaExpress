@@ -33,6 +33,11 @@
             <th mat-header-cell *matHeaderCellDef>Ações</th>
             <td mat-cell *matCellDef="let row">
                 <!-- Botões de ação aqui -->
+
+                <a routerLink="/clients/delete/{{row.cliId}}" class="delete">
+                    <i class="material-icons">delete</i>
+                </a>    
+
             </td>
         </ng-container>
 
