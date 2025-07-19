@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { Client } from '../client.model';
 import { ClientService } from '../client.service';
 
@@ -8,7 +8,7 @@ import { ClientService } from '../client.service';
   styleUrls: ['./client-read.component.css']
 })
 export class ClientReadComponent {
-  client!: Client[];
+  @Input() client: Client[] = [];
   displayedColumns = ['cliId', 'cliNome', 'cliCpf', 'conEmail', 'conTelefoneComercial', 'endCidade', 'endEstado', 'actions'];
 
   constructor(private clientService: ClientService) { }

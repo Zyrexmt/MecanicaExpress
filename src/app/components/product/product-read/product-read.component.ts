@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Product } from '../product.model';
 
@@ -9,8 +9,8 @@ import { Product } from '../product.model';
 })
 export class ProductReadComponent {
 
-  product!: Product[];
-  displayedColumns = ['proNome', 'proPrecoCusto','proPrecoVenda', 'proQuantidadeEstoque', 'proCategoria', 'proCodigoBarras', 'proMarca', 'proAtivo', 'forId', 'actions'];
+  @Input() product: Product[] = [];
+  displayedColumns = ['proNome', 'proPrecoCusto','proPrecoVenda', 'proQuantidadeEstoque', 'proCategoria', 'proUnidadeMedida', 'proCodigoBarras', 'proMarca', 'proAtivo', 'forId', 'actions'];
 
   constructor(private productService: ProductService) { }
   

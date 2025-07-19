@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SupplierService } from '../supplier.service';
 import { Supplier } from '../supplier.model';
 
@@ -9,7 +9,7 @@ import { Supplier } from '../supplier.model';
 })
 export class SupplierReadComponent {
 
-  supplier!: Supplier[];
+  @Input() supplier: Supplier[] = [];
   displayedColumns = ['forId', 'forNomeFantasia', 'forCnpj', 'conEmail', 'conTelefoneComercial', 'endCidade', 'endEstado', 'actions'];
 
   constructor(private supplierService: SupplierService) { }

@@ -10,7 +10,9 @@ import { ClientService } from 'src/app/components/client/client.service';
 })
 export class ClientMenuComponent implements OnInit{
 
+  searchText: string = '';
   allClient: Client[] = [];
+  clientFilter: Client[] = [];
 
   constructor(
        private router: Router,
@@ -24,7 +26,18 @@ export class ClientMenuComponent implements OnInit{
     ngOnInit(): void {
       this.clientService.read().subscribe((client: Client[]) => {
        this.allClient = client;
-     })
+       this.clientFilter = client;
+     });
     }
 
+    filterClients(): void {
+      const filter = this.searchText.toLowerCase();
+      this.clientFilter = this.allClient.filter(f =>
+        f.cliId?.toString().includes(filter) ||
+        f.cliNome.toLowerCase().includes(filter) ||
+        f.cliCpf.toLowerCase().includes(filter) ||
+        f.endCidade.toLowerCase().includes(filter) ||
+        f.endEstado.toLowerCase().includes(filter)
+      );
+    }
 }

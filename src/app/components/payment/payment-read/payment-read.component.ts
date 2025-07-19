@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PaymentService } from '../payment.service';
 import { Payment } from '../payment.model';
 
@@ -9,9 +9,7 @@ import { Payment } from '../payment.model';
 })
 export class PaymentReadComponent {
 
-
-
-  payment!: Payment[];
+  @Input() payment: Payment[] = [];
   displayedColumns = ['fpgId', 'fpgTipo', 'fpgDescricao', 'fpgPermiteParcelamento', 'fpgNumMaxParcelas', 'fpgTaxaAdicional', 'actions'];
 
   constructor(private paymentService: PaymentService) { }

@@ -2,7 +2,7 @@
     <mat-card class="quadro">
         <!-- conteudo-->
         <mat-card class="form-card">
-            <mat-card-title>New product</mat-card-title>
+            <mat-card-title>Atualizar Produto</mat-card-title>
             <div class="form-scroll">
                 <form>
                     <mat-form-field>
@@ -29,42 +29,28 @@
                     <mat-form-field class="full-width custom-select">
                         <mat-label>Categoria</mat-label>
                         <mat-select name="proCategoria" required  [(ngModel)]="product.proCategoria" >
-                            <mat-option value="teclado">
-                                <mat-icon class="option-icon">keyboard</mat-icon>
-                                Teclado
-                            </mat-option>
-                            <mat-option value="mouse">
-                                <mat-icon class="option-icon">mouse</mat-icon>
-                                Mouse
-                            </mat-option>
-                            <mat-option value="monitor">
-                                <mat-icon class="option-icon">tv</mat-icon>
-                                Monitor
-                            </mat-option>
-                            <mat-option value="headset">
-                                <mat-icon class="option-icon">headset</mat-icon>
-                                Headset
-                            </mat-option>
-                            <mat-option value="mousepad">
-                                <img src="assets/img/mousepad.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                MousePad
-                            </mat-option>
-                            <mat-option value="cadeira">
-                                <img src="assets/img/cadeira-gamer.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                Cadeira Gamer
-                            </mat-option>
-                            <mat-option value="Console">
-                                <img src="assets/img/console-de-videogame.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                Console
-                            </mat-option>
-                            <mat-option value="Controle">
-                                <img src="assets/img/controle-de-video-game.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                Controle
-                            </mat-option>
-                            <mat-option value="acessorios">
-                                <img src="assets/img/outra.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                Acessórios
-                            </mat-option>
+                            
+                            <mat-option value="Amortecedor Dianteiro">
+                            <img src="assets/images/amortecedor.png" alt="amortecedor" width="20px" style="margin-right: 8px;">
+                            Amortecedor Dianteiro MecanicaExpress
+                        </mat-option>
+                        <mat-option value="Amortecedor Traseiro">
+                            <img src="assets/images/amortecedor.png" alt="amortecedor" width="20px" style="margin-right: 8px">
+                            Amortecedor Traseiro MecanicaExpress
+                        </mat-option>
+                        <mat-option value="Radiador">
+                            <img src="assets/images/radiador.png" alt="radiador" width="20px" style="margin-right: 8px;">
+                            Radiador MecanicaExpress
+                        </mat-option>
+                        <mat-option value="Disco de Freio">
+                            <img src="assets/images/freio.png" alt="disco de freio" width="20px" style="margin-right: 8px;">
+                            Disco de Freio MecanicaExpress
+                        </mat-option>
+                        <mat-option value="Óleo Motor">
+                            <img src="assets/images/oleo.png" alt="oleo motor" width="20px" style="margin-right: 8px;">
+                            Óleo de Motor MecanicaExpress
+                        </mat-option>
+
                         </mat-select>
                     </mat-form-field>
                     <!--Código de barras-->
@@ -76,42 +62,12 @@
                     <mat-form-field class="full-width custom-select">
                         <mat-label>Marca</mat-label>
                         <mat-select name="proMarca" required  [(ngModel)]="product.proMarca" >
-                            <mat-option value="razer">
-                                <img src="assets/img/razer.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                Razer
-                            </mat-option>
-                            <mat-option value="hyperx">
-                                <img src="assets/img/hyperx.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                HyperX
-                            </mat-option>
-                            <mat-option value="nzxt">
-                                <img src="assets/img/NZXT.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                NZXT
-                            </mat-option>
-                            <mat-option value="Dell">
-                                <img src="assets/img/Dell.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                Dell
-                            </mat-option>
-                            <mat-option value="Lian Li">
-                                <img src="assets/img/LianLi.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                Lian Li
-                            </mat-option>
-                            <mat-option value="logitech">
-                                <img src="assets/img/LogiTech.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                Logitech
-                            </mat-option>
-                            <mat-option value="steelseries">
-                                <img src="assets/img/steelseries.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                SteelSeries
-                            </mat-option>
-                            <mat-option value="reddragon">
-                                <img src="assets/img/redragons.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                RedDragon
-                            </mat-option>
-                            <mat-option value="outra">
-                                <img src="assets/img/outra.png" width="20" style="margin-right: 8px;" class="option-img" />
-                                Outra Marca
-                            </mat-option>
+
+                        <mat-option value="MecanicaExpress">
+                            <img src="assets/images/logo.svg" width="20px" style="margin-right: 8px;" class="option-img" />
+                            MecanicaExpress
+                        </mat-option>
+
                         </mat-select>
                     </mat-form-field>
                     <!--unidade de medida-->
@@ -147,8 +103,8 @@
                 </form>
 
                 <div class="finish">
-                    <button (click)="cancel()" class="cancel">CANCEL</button>
-                    <button (click)="updateProduct()" class="save">DELETE</button>
+                    <button (click)="cancel()" class="cancel">CANCELAR</button>
+                    <button (click)="updateProduct()" class="save">ATUALIZAR</button>
                 </div>
             </div>
         </mat-card>

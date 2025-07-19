@@ -10,7 +10,9 @@ import { Supplier } from 'src/app/components/supplier/supplier.model';
 })
 export class SupplierMenuComponent implements OnInit {
 
+  searchText: string = '';
   allSupplier: Supplier[] = [];
+  supplierFilter: Supplier[] = [];
 
   constructor(
        private router: Router,
@@ -27,4 +29,14 @@ export class SupplierMenuComponent implements OnInit {
      })
     }
 
+    filterSuppliers(): void {
+      const filter = this.searchText.toLowerCase();
+      this.supplierFilter = this.allSupplier.filter(f =>
+        f.forId?.toString().includes(filter) ||
+        f.forNomeFantasia.toLowerCase().includes(filter) ||
+        f.forCnpj.toLowerCase().includes(filter) ||
+        f.endCidade.toLowerCase().includes(filter) ||
+        f.endEstado.toLowerCase().includes(filter)
+      );
+    }
 }

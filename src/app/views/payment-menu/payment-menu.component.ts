@@ -10,7 +10,9 @@ import { PaymentService } from 'src/app/components/payment/payment.service';
 })
 export class PaymentMenuComponent implements OnInit{
 
+  searchText: string = '';
   allPayment: Payment[] = [];
+  paymentFitler: Payment[] = [];
 
   constructor(
        private router: Router,
@@ -24,7 +26,16 @@ export class PaymentMenuComponent implements OnInit{
     ngOnInit(): void {
       this.paymentService.read().subscribe((payment: Payment[]) => {
        this.allPayment = payment;
-     })
+       this.paymentFitler = payment
+     });
+    }
+
+    filterPayments(): void {
+      const filter = this.searchText.toLocaleLowerCase();
+      this.paymentFitler = this.allPayment.filter(f =>
+        f.fpgId?.toString().includes(filter) ||
+        f.fpgTipo.toLocaleLowerCase().includes(filter)
+      );
     }
 
 }

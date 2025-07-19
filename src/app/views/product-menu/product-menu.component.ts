@@ -10,7 +10,9 @@ import { Product } from 'src/app/components/product/product.model';
 })
 export class ProductMenuComponent implements OnInit {
   
+    searchText: string = '';
     allProduct: Product[] = [];
+    productFilter: Product[] = [];
   
     constructor(
          private router: Router,
@@ -26,4 +28,16 @@ export class ProductMenuComponent implements OnInit {
          this.allProduct = product;
        })
       }
+
+      filterProducts(): void {
+      const filter = this.searchText.toLowerCase();
+      this.productFilter = this.allProduct.filter(f =>
+        f.proId?.toString().includes(filter) ||
+        f.proNome.toLowerCase().includes(filter) ||
+        f.proCategoria.toLowerCase().includes(filter) ||
+        f.proAtivo.toLowerCase().includes(filter) ||
+        f.proMarca.toLowerCase().includes(filter) ||
+        f.proCodigoBarras.toLowerCase().includes(filter)
+      );
+    }
 }
