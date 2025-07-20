@@ -17,6 +17,8 @@ import { PaymentUpdateComponent } from './components/payment/payment-update/paym
 import { PaymentDeleteComponent } from './components/payment/payment-delete/payment-delete.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
+import { SaleCreateComponent } from './components/sale/sale-create/sale-create.component';
+import { SaleMenuComponent } from './views/sale-menu/sale-menu.component';
 
 const routes: Routes = [
 
@@ -87,6 +89,14 @@ const routes: Routes = [
   {
     path: "payments/delete/:fpgId",
     component: PaymentDeleteComponent
+  },
+  {
+    path: "sales",
+    component: SaleMenuComponent
+  },
+  {
+    path: "sales/create",
+    component: SaleCreateComponent
   }
 ];
 
