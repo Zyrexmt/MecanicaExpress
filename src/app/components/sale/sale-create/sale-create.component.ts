@@ -5,6 +5,7 @@ import { ProductService } from '../../product/product.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Sale, Purchase } from '../sale.model';
 import { SaleService } from '../sale.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sale-create',
@@ -19,12 +20,18 @@ export class SaleCreateComponent implements OnInit{
   constructor( private fb: FormBuilder,
                private productService: ProductService,
                private snackBar: MatSnackBar,
+               private router: Router,
                private saleService: SaleService) { }
+
+  generateVendaCodigo(): string {
+  const codigo = Math.floor(Math.random() * 1000000);
+  return codigo.toString().padStart(6, '0');
+}
 
   ngOnInit(): void {
     this.saleForm = this.fb.group({
-      vendaCodigo: ['', Validators.required],
-      vendaData: ['', Validators.required],
+      vendaCodigo: [this.generateVendaCodigo(), Validators.required],
+      vendaData: [new Date(), Validators.required],
       cliId: [null, Validators.required],
       fpgId: [null, Validators.required],
       compras: this.fb.array([], Validators.required)
@@ -91,6 +98,7 @@ export class SaleCreateComponent implements OnInit{
   this.saleService.create(sale).subscribe({
     next: () => {
       this.snackBar.open('Venda criada com sucesso!', 'X', { duration: 3000 });
+      this.router.navigate(['/sales']);
     },
     error: (err) => {
       this.snackBar.open('Erro ao criar venda', 'X', { duration: 3000 });

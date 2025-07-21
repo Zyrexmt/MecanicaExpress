@@ -16,17 +16,6 @@
 
 }
 
-input[type="text"] {
-    width:100%;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 15px;
-    background-color: var(--background-base);
-    color: var(--text-primary);
-}
-
-
-
 
 .header {
     background-color: var(--brand-primary);
@@ -40,15 +29,14 @@ input[type="text"] {
     margin-top: 5px;
 }
 
-.white{
-    color:white;
+.header-time {
+  font-size:30px;
+  color: #ffffff;
+  font-weight: 600;
 }
 
-.search-container {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    
-}
+
+
+
 
 

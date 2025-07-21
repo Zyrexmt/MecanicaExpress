@@ -26,6 +26,7 @@ button {
     letter-spacing: 0.5px; 
     align-items: center; 
     transition: all 0.3s ease; 
+    
 }
 
 
@@ -39,11 +40,13 @@ button {
     justify-content: space-around;
     margin-right:2px ;
     margin-left: 2px;
+    margin-top: 15px;
+
 }
 
 .button {
     width: 48%;                
-    height: 60px !important;
+    height: 70px !important;
     color: white;
     background: var(--action-primary);
     border: none;
@@ -55,7 +58,7 @@ button {
 }
 
 .mat-elevation-z4 {
-    height: 60px;
+    height: 70px;
     width: 48%;
     border-radius: 5px;
     background: var(--action-primary);
@@ -65,7 +68,7 @@ button {
 .filter {
     width: 98%;
     margin: 4px;
-    height: 50px !important;
+    height: 60px !important;
     background: white;
     border: none;
     border-radius: 5px; 
@@ -87,5 +90,6 @@ button {
     transition: 0.2s;
     transform: scale(1.01);
 }
+
 
 

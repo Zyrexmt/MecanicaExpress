@@ -4,9 +4,10 @@
             <div class="create-button">
         <button mat-raised-button class="button" (click)="navigateToSaleCreate()">Nova venda</button>
         <div class="mat-elevation-z4">
-            <input type="text" placeholder="Filtro de pesquisa"  class="filter"> 
+            <input type="text" placeholder="Filtro de pesquisa"  [(ngModel)]="searchText" (input)="filterSales()" class="filter"> 
         </div>
     </div>
+    <app-sale-read [sales]="saleFilter"></app-sale-read>
     </mat-card>
 </div>
     

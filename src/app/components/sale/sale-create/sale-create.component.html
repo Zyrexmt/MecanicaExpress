@@ -5,36 +5,29 @@
 
       <div class="form-scroll">
         <form [formGroup]="saleForm" (ngSubmit)="onSubmit()" class="form-grid">
-          <!-- Coluna esquerda: Dados da venda -->
           <div class="form-section">
-            <!-- Código da Venda -->
             <mat-form-field appearance="outline">
               <mat-label>Código Venda</mat-label>
-              <input matInput formControlName="vendaCodigo" required>
+              <input matInput formControlName="vendaCodigo" readonly="">
             </mat-form-field>
 
-            <!-- Data da Venda -->
             <mat-form-field appearance="outline">
               <mat-label>Data da Venda</mat-label>
-              <input matInput [matDatepicker]="picker1" formControlName="vendaData" required>
-              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <input matInput [matDatepicker]="picker1" formControlName="vendaData" readonly>
               <mat-datepicker #picker1></mat-datepicker>
             </mat-form-field>
 
-            <!-- Cliente -->
             <mat-form-field appearance="outline">
               <mat-label>Cliente</mat-label>
               <input matInput type="number" formControlName="cliId" required placeholder="ID do Cliente">
             </mat-form-field>
 
-            <!-- Forma de Pagamento -->
             <mat-form-field appearance="outline">
               <mat-label>Forma de Pagamento</mat-label>
               <input matInput type="number" formControlName="fpgId" required placeholder="ID da Forma de Pagamento">
             </mat-form-field>
           </div>
 
-          <!-- Coluna direita: Produtos -->
           <div class="form-section">
             <div formArrayName="compras">
               <div
@@ -42,7 +35,6 @@
                 [formGroupName]="i"
                 class="produto-bloco"
               >
-                <!-- Produto -->
                 <mat-form-field appearance="outline">
                   <mat-label>Produto</mat-label>
                   <mat-select formControlName="proId" (selectionChange)="onProdutoChange(i)" required>
@@ -51,19 +43,16 @@
                   </mat-select>
                 </mat-form-field>
 
-                <!-- Quantidade -->
                 <mat-form-field appearance="outline">
                   <mat-label>Quantidade</mat-label>
                   <input matInput type="number" formControlName="compraQuantidade" min="1" required>
                 </mat-form-field>
 
-                <!-- Preço de Venda -->
                 <mat-form-field appearance="outline">
                   <mat-label>Preço de Venda</mat-label>
                   <input matInput type="number" formControlName="compraPrecoVenda" step="0.01" min="0" required>
                 </mat-form-field>
 
-                <!-- Botões -->
                 <div style="display: flex; gap: 10px;">
                   <button mat-stroked-button color="warn" type="button" (click)="removeCompra(i)" *ngIf="compras.length > 1">
                     Remover Produto

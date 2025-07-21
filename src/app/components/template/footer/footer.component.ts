@@ -10,4 +10,9 @@ export class FooterComponent {
     window.open('https://www.linkedin.com/in/matheusaleixoramos/', '_blank');
   }
 
+  openGitHub() {
+    window.open('https://github.com/Zyrexmt', '_blank');
+  }
+
+  currentYear: number = new Date().getFullYear();
 }

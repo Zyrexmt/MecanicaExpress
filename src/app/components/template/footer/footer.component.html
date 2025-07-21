@@ -1,7 +1,16 @@
 <main class="container">
-    <mat-toolbar class="footer">
+    <mat-toolbar class="tollbar">
+        <a></a>
+        <div class="center">
+            <span>© {{ currentYear }} MecanicaExpress. Todos os direitos reservados.</span>
+        </div>
+        <div class="footer">
+        <button mat-icon-button (click)="openGitHub()">
+            <img src="assets/images/github.png" alt="GitHub">
+        </button>
         <button mat-icon-button (click)="openLinkedin()">
             <img src="assets/images/linkedin.png" alt="Linkedin">
         </button>
+        </div>
     </mat-toolbar>
 </main>

@@ -2,13 +2,12 @@
     <mat-toolbar class="header">
         <button mat-button>
             <img src="assets/images/logo.svg" alt="Logo" class="logo">
-        </button> 
-        <div class="search-container">
-        <button mat-icon-button class="searchbar">
-            <mat-icon class="white">search white</mat-icon>
         </button>
-        <input type="text" placeholder="Buscar..." class="input-search"/>
-        </div>
+
+        <div class="header-time">
+            {{ currentDate | date: 'EEEE, dd/MM/yyyy - HH:mm' }}
+        </div>   
+
         <button mat-button>
             <img src="assets/images/User.png" alt="User" class="user">
         </button>

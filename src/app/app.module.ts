@@ -43,6 +43,7 @@ import { ProductDeleteComponent } from './components/product/product-delete/prod
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { SaleCreateComponent } from './components/sale/sale-create/sale-create.component';
 import { SaleMenuComponent } from './views/sale-menu/sale-menu.component';
+import { SaleReadComponent } from './components/sale/sale-read/sale-read.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { SaleMenuComponent } from './views/sale-menu/sale-menu.component';
       ProductUpdateComponent,
       SaleCreateComponent,
       SaleMenuComponent,
+      SaleReadComponent,
   ],
   imports: [
     BrowserModule,

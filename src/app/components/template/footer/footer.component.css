@@ -3,13 +3,31 @@
 }
 
 .footer {
+    position: sticky;
+    overflow: hidden;
+    justify-content: end;
+    margin-right: 5px;
+    height: 100%;
+}
+
+.tollbar {
     background-color: var(--brand-primary);
     padding: 0.5rem;
     border-radius: 15px;
     position: sticky;
     overflow: hidden;
-    justify-content: end;
+    justify-content: space-between;
     margin-left: 5px;
     margin-right: 5px;
     height: 100%;
+
+}
+
+.center {
+    color: white;
+    font-weight: 500;
+}
+
+a {
+    margin-right: 150px;
 }

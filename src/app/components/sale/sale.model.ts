@@ -5,6 +5,7 @@ export interface Purchase {
 }
 
 export interface Sale {
+    vendaId?: number;
     vendaCodigo: string;
     vendaData: string;
     cliId: number;
