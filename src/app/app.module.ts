@@ -1,4 +1,6 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -44,6 +46,8 @@ import { ProductUpdateComponent } from './components/product/product-update/prod
 import { SaleCreateComponent } from './components/sale/sale-create/sale-create.component';
 import { SaleMenuComponent } from './views/sale-menu/sale-menu.component';
 import { SaleReadComponent } from './components/sale/sale-read/sale-read.component';
+
+  registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -97,7 +101,9 @@ import { SaleReadComponent } from './components/sale/sale-read/sale-read.compone
     MatNativeDateModule,
     MatSnackBarModule,
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
