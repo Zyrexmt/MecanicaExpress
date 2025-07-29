@@ -61,11 +61,11 @@
                 </mat-form-field>
 
                 <div>
-                  <button style="width: 250px; height: 65%;" mat-stroked-button color="warn" type="button" (click)="removeCompra(i)" *ngIf="compras.length > 1">
-                    Remover Produto
-                  </button>
-                  
+                  <button mat-icon-button color="warn" type="button" (click)="removeCompra(i)" *ngIf="compras.length > 1">
+                    <mat-icon>delete</mat-icon>
+                  </button>                  
                 </div>
+
               </div>
             </div>
             <button mat-raised-button color="primary" type="button" (click)="addCompra()">

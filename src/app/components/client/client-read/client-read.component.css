@@ -72,6 +72,7 @@ tr:hover {
   max-height: 500px;
   overflow-y: auto;
   padding-right: auto;
+
 }
 
 .scrollable-form::-webkit-scrollbar {
@@ -96,5 +97,7 @@ tr:hover {
 
 .scrollable-form {
   scrollbar-width: thin;
-  scrollbar-color: #a020f0 #2a003f;
+  scrollbar-color: var(--text-secondary) var(--text-primary);
 }
+
+

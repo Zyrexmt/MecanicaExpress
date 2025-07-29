@@ -53,7 +53,7 @@ export class SupplierCreateComponent implements OnInit {
         },
         error: () => {
           console.error('Erro ao buscar o CEP');
-        }
+        } 
       });
     }
   }

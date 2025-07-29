@@ -1,5 +1,6 @@
+/* Container principal (tipo card) */
 .mat-elevation-z4 {
-  background: #2c3e50;
+  background: #2c3e50; /* Gradiente definido no :root */
   border-radius: 16px;
   margin: 30px;
   padding: 24px;
@@ -7,6 +8,7 @@
   backdrop-filter: blur(6px);
 }
 
+/* Tabela */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -16,6 +18,7 @@ table {
   color: var(--text-primary);
 }
 
+/* Cabeçalho */
 th {
   background-color: #1f1f1f;
   color: #ffffff;
@@ -25,16 +28,19 @@ th {
   border-bottom: 2px solid var(--border-base);
 }
 
+/* Células */
 td {
   padding: 14px 16px;
   color: #dcdcdc;
   border-bottom: 1px solid #2e2e2e;
 }
 
+/* Hover nas linhas */
 tr:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
+/* Ícones */
 .edit > i,
 .delete > i {
   font-size: 20px;
@@ -42,26 +48,31 @@ tr:hover {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
+/* Editar (verde neon) */
 .edit > i {
   color: var(--status-success);
   text-shadow: 0 0 6px var(--status-success), 0 0 12px var(--status-success);
 }
 
+/* Deletar (vermelho neon) */
 .delete > i {
   color: var(--status-error);
   text-shadow: 0 0 6px var(--status-error), 0 0 12px var(--status-error);
 }
 
+/* Hover nos ícones */
 .edit > i:hover,
 .delete > i:hover {
   transform: scale(1.2);
   opacity: 0.9;
 }
 
+/* Scroll customizado */
 .scrollable-form {
   max-height: 500px;
   overflow-y: auto;
   padding-right: auto;
+
 }
 
 .scrollable-form::-webkit-scrollbar {
@@ -86,5 +97,7 @@ tr:hover {
 
 .scrollable-form {
   scrollbar-width: thin;
-  scrollbar-color: #a020f0 #2a003f;
+  scrollbar-color: var(--text-secondary) var(--text-primary);
 }
+
+
