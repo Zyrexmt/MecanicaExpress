@@ -25,6 +25,8 @@ export class ProductUpdateComponent {
     });
   }
 
+  view = false;
+
   updateProduct(): void {
     this.productService.update(this.product).subscribe(() => {
       this.productService.showMessage('Produto atualizado com sucesso!');

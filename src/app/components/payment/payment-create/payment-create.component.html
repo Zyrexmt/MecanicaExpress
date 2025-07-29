@@ -9,6 +9,7 @@
                     <!--Forma Pagamento-->
                 <mat-form-field>
                     <mat-label>Forma de pagamento?</mat-label>
+                    <mat-icon matPrefix>credit_card</mat-icon>
                     <mat-select name="fpgTipo" required [(ngModel)]="payment.fpgTipo" >
                         <mat-option value="Credito">Crédito</mat-option>
                         <mat-option value="Debito">Débito</mat-option>
@@ -19,6 +20,7 @@
 
                     <!--Descrição-->
                     <mat-form-field>
+                        <mat-icon matPrefix>description</mat-icon>
                         <mat-label>Descrição</mat-label>
                         <textarea matInput placeholder="Descrição" name="fpgDescricao" required [(ngModel)]="payment.fpgDescricao"></textarea>
                     </mat-form-field>
@@ -52,6 +54,7 @@
                 </mat-form-field>
                 <!--Taxa adicional-->
                 <mat-form-field>
+                    <mat-icon matPrefix>trending_up</mat-icon>
                     <mat-label>Taxa adicional</mat-label>
                     <mat-select name="fpgTaxaAdicional" required [(ngModel)]="payment.fpgTaxaAdicional">
                         <mat-option value="0">Sem Taxa</mat-option>

@@ -1,34 +1,41 @@
 <div class="container">
   <mat-card class="quadro">
     <mat-card class="form-card">
-      <mat-card-title>Criar venda</mat-card-title>
+      <mat-card-title>Registrar venda</mat-card-title>
 
       <div class="form-scroll">
         <form [formGroup]="saleForm" (ngSubmit)="onSubmit()" class="form-grid">
           <div class="form-section">
+
+            <h3 class="subtittle">Dados</h3>
             <mat-form-field appearance="outline">
               <mat-label>Código Venda</mat-label>
-              <input matInput formControlName="vendaCodigo" readonly="">
+                <mat-icon matPrefix>confirmation_number</mat-icon>
+              <input matInput formControlName="vendaCodigo" readonly>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
               <mat-label>Data da Venda</mat-label>
+                  <mat-icon matPrefix>date_range</mat-icon>
               <input matInput [matDatepicker]="picker1" formControlName="vendaData" readonly>
               <mat-datepicker #picker1></mat-datepicker>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
               <mat-label>Cliente</mat-label>
+                <mat-icon matPrefix>person</mat-icon>
               <input matInput type="number" formControlName="cliId" required placeholder="ID do Cliente">
             </mat-form-field>
 
             <mat-form-field appearance="outline">
               <mat-label>Forma de Pagamento</mat-label>
+                <mat-icon matPrefix>payment</mat-icon>
               <input matInput type="number" formControlName="fpgId" required placeholder="ID da Forma de Pagamento">
             </mat-form-field>
           </div>
 
           <div class="form-section">
+            <h3 class="subtittle">Produtos</h3>
             <div formArrayName="compras">
               <div
                 *ngFor="let compra of compras.controls; let i = index"
@@ -53,16 +60,17 @@
                   <input matInput type="number" formControlName="compraPrecoVenda" step="0.01" min="0" required>
                 </mat-form-field>
 
-                <div style="display: flex; gap: 10px;">
-                  <button mat-stroked-button color="warn" type="button" (click)="removeCompra(i)" *ngIf="compras.length > 1">
+                <div>
+                  <button style="width: 250px; height: 65%;" mat-stroked-button color="warn" type="button" (click)="removeCompra(i)" *ngIf="compras.length > 1">
                     Remover Produto
                   </button>
-                  <button mat-raised-button color="primary" type="button" (click)="addCompra()">
-                    Adicionar Produto
-                  </button>
+                  
                 </div>
               </div>
             </div>
+            <button mat-raised-button color="primary" type="button" (click)="addCompra()">
+                    Adicionar Produto
+                  </button>
           </div>
         </form>
       </div>

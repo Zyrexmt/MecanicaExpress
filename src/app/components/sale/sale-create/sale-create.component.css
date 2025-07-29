@@ -57,7 +57,7 @@
 
 .form-card {
     margin: 30px;
-    width: 70%;
+    width: 40%;
     height: 100%;
     align-self: center;
     background-color: var(--background-base);
@@ -93,13 +93,10 @@ mat-card-title {
 [formArrayName="compras"] {
   flex: 1;
   min-width: 320px;
-  max-width: 550px;
 }
 
 
 .form-grid {
-  display: flex;
-  flex-direction: row;
   gap: 30px;
   flex-wrap: wrap;
 }
@@ -113,14 +110,25 @@ mat-card-title {
 }
 
 .produto-bloco {
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-
-
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    justify-content: center;
+  }
+ 
+    .subtittle {
+    font-size: 1.3rem;
+    margin: 30px 0 10px;
+    color: #555;
+    border-bottom: 2px solid #3f51b5;
+    padding-bottom: 4px;
+    align-content: start;
+  }
 
 
 

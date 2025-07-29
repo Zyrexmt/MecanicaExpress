@@ -25,7 +25,7 @@ export class SaleCreateComponent implements OnInit{
 
   generateVendaCodigo(): string {
   const codigo = Math.floor(Math.random() * 1000000);
-  return codigo.toString().padStart(6, '0');
+  return codigo.toString().padStart(6, '');
 }
 
   ngOnInit(): void {

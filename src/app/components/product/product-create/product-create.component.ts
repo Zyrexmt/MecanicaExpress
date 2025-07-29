@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../product.model';
 import { Router } from '@angular/router';
 import { ProductService } from '../product.service';
+import { MatDatepicker } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-product-create',
@@ -17,7 +18,7 @@ export class ProductCreateComponent implements OnInit {
     proPrecoVenda: 0,
     proQuantidadeEstoque: 0,
     proCategoria: '',
-    proCodigoBarras: '',
+    proCodigoBarras: this.generateCodigoBarra(),
     proMarca: '',
     proUnidadeMedida: '',
     proAtivo: 'Ativo',
@@ -28,6 +29,13 @@ export class ProductCreateComponent implements OnInit {
 
   constructor(private productService: ProductService,
               private router: Router) {}
+
+  generateCodigoBarra(): string {
+  const codigo = Math.floor(Math.random() * 1000000);
+  return codigo.toString().padStart(10, '2007');
+}
+
+  view = false;
 
   ngOnInit(): void { }
 

@@ -42,7 +42,8 @@
   background-color: #f4a261;
   border-radius: 15px;
   padding: 12px 18px;
-  max-width: 300px;
+  min-width: 300px;
+  max-width: 350px;
   align-items: start;
   box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
@@ -54,7 +55,7 @@
 }
 
 .sale-item {
-  display: flex;
+  display: row;
   align-items: center;
   gap: 6px;
   padding: 0 10px;
