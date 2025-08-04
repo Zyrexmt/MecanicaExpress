@@ -4,7 +4,7 @@
 }
 
 .sidebar{
-    height: 84.5dvh;
+    height: 80.5dvh;
     background-color: var(--brand-primary);
     color: white;
     position: sticky;
